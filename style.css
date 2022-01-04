@@ -362,6 +362,7 @@ footer{
 
 .footer_products ul li a{
     color: black !important;
+    text-decoration: none;
 }
 
 .footer__about{
