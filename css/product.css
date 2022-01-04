@@ -171,17 +171,20 @@ nav .logo img{
     bottom: 10%;
     left: 10%;
     color: white;
+    z-index: 3;
 }
 
-.overlay__Product{
+.overlay__product{
     position: absolute;
     top:0;
     left: 0;
     width: 100%;
     height: 100%;
     opacity: 0.5;
+    z-index: 2;
     background-color: black;
 }
+
 
 .mission__container__text{
     /* border: 2px solid teal; */
