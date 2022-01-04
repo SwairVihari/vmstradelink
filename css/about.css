@@ -8,14 +8,14 @@
 
 }
 h1, h2{
-    font-family: 'Archivo Black', sans-serif ;
+    font-family: 'Archivo Black', sans-serif !important;
 }
+
 
 body{
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(226,240,254,1) 0%, rgba(255,247,228,1) 90% );
    
 }
-
 
 
 #preloader{
@@ -54,7 +54,7 @@ body{
 
 nav{
     z-index: 6;
-    position:absolute;
+    position:static;
     top:0;
     left: 0;
     display: flex;
@@ -64,7 +64,9 @@ nav{
     color: white;
     width: 100%;
 }
-
+.display-none{
+    display: none;
+}
 
 nav .logo{
     /* border: 2px solid green; */
@@ -92,222 +94,113 @@ nav .logo img{
     list-style: none;
     margin: 0px 10px;
 
+
 }
 
+
+
 .navlinks li a{
-   color: white;
+   color: black;
     text-decoration: none;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 .hamburger{
     display: none;
-    color: white !important;
+    color: black !important;
 }
 
-
-.carousel-item{
-    height: 100vh;
+.about__container{
+    padding: 50px 200px;
 }
 
-.carousel-item img{
+.about__container__img__container{
+    width: 100%;
+    height: 40vh;
+   border-radius: 10px;
+   overflow:hidden;
+    /* border: 2px solid red; */
+    position: relative;
+  
+
+}
+
+.about__container__img__container img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color:rgb(7, 7, 7);
-    width: 100%;
-    height:100%;
-    opacity: 0.3;
-}
-
-.carousel-caption{
-    z-index: 5;
-}
-
-.display-none{
-    display: none;
-}
-
-.Hero{
-    /* color: #E1D89F; */
-    color:white;
-    position: absolute;
-    top:50%;
-    left:50%;
-    /* border: 2px solid red; */
-    transform: translate(-50%,-50%);
-    z-index: 10;
-    /* width: 20%; */
-    display: flex;
     
+    object-position:  50% 50%;
 }
 
-
-
-.hero-1 h2 span{
-    display: inline-block;
-    margin-left: 0.5rem;
-    font-weight: bolder;
-    font-family: 'Playball', cursive !important;
-}
-
-.about-us{
-    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(226,240,254,1) 0%, rgba(255,247,228,1) 90% ); */
-    width: 100%;
-    text-align: center;
-   padding: 5rem 5rem;
-
-}
-
-.about-us h1{
-    font-weight: bolder;
-    margin-bottom: 2rem;
-    /* border: 2px solid red; */
-    position: relative;
-}
-
-.h1_underline{
+.about__container__title{
     position: absolute;
-    background-color: black;
-    width: 10%;
-    height: 0.2vh;
-    bottom: 0%;
-    left:50%;
-    transform: translate(-50%,0);
-
+    bottom: 10%;
+    left: 10%;
+    color: white;
+    font-size: 2rem;
 }
 
-.products{
-    /* background-image: linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% ); */
-    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(226,240,254,1) 0%, rgba(255,247,228,1) 90% ); */
-   
-    width: 100%;
-
-}
-
-.products h1{
-    width: 100%;
-    margin: auto;
-    padding-top: 50px;
+.about__container__hero__text{
+    /* border:2px solid navy; */
+    font-weight: 500;
+    padding: 20px 40px 20px 40px;
     text-align: center;
-    color: black;
-    font-weight: bolder;
-    position: relative;
-    /* border: 2px solid red; */
+    font-size: 1rem;
+
 }
 
-.h1_products_underline{
-    position: absolute;
-    background-color: black;
-    width: 10%;
-    height: 0.2vh;
-    bottom: 0%;
-    left:50%;
-    transform: translate(-50%,0);
-}
-
-
-
-.products_container{
+.about__container__mission__container{
+    /* border: 2px solid magenta; */
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
+    margin-top: 50px;
+
 }
 
-.products_container_item{
-    width: 25vw;
-    height: 20vw;
-    /* border: 2px solid green; */
-    margin: 2rem 0rem;
+.mission__container__img__container{
+    /* border: maroon 2px solid; */
+    width: 100%;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
 }
 
-
-
-.products_container_item img{
-    width: 100%;
+.mission__container__img__container img{
+    width:100%;
     height: 100%;
     object-fit: cover;
-    transition: all 0.5s ease-in;
-}
-
-.products_container_item:hover img{
-    transform: scale(1.5);
-    object-fit: cover;
 
 }
 
-.product_overlay{
-    width: 100%;
-    height: 100%;
+.text_title{
     position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 0.1s ease-in;
-    background-color: black;
-    opacity: 0.3;
-}
-
-.products_container_item:hover .product_overlay{
-    background-color: white;
-    opacity: 0.5;
-}
-
-.products_container_item h3{
-    color: white !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 2em;
-    font-weight: 600;
-}
-
-.products_container_item h3 a{
+    bottom: 10%;
+    left: 10%;
     color: white;
-    text-decoration: none;
 }
 
-.products_container_item:hover h3 a{
-    color: black;
-}
-
-.gallary{
-    width: 100%;
-    height: 50vh;
-    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(226,240,254,1) 0%, rgba(255,247,228,1) 90% ); */
-   
-}
-
-.gallary h1{
-    width: 100%;
-    margin: auto;
-    padding-top: 50px;
-    text-align: center;
-    color: black;
-    font-weight: bolder;
-    position: relative;
-    /* border: 2px solid red; */
-}
-
-.h1_gallary_underline{
+.overlay__about{
     position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
     background-color: black;
-    width: 10%;
-    height: 0.2vh;
-    bottom: 0%;
-    left:50%;
-    transform: translate(-50%,0);
 }
+
+.mission__container__text{
+    /* border: 2px solid teal; */
+    width:100%;
+    padding: 2rem 0rem 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:  center;
+}
+
+
 .footer{
     background-color: #f3e6e8;
 background-image: linear-gradient(315deg, #fffbfc 0%, #d5d0e5 74%);
@@ -317,6 +210,7 @@ background-image: linear-gradient(315deg, #fffbfc 0%, #d5d0e5 74%);
     align-items: center;
 }
 footer{
+    /* font-family: 'Roboto', sans-serif !important; */
     width: 100%;
    /* min-height: 50vh; */
     display: flex;
@@ -339,12 +233,6 @@ footer{
   
 }
 
-.sitemap ul li a{
-
-    text-decoration: none;
-    color: black !important;
-  }
-
 .footer_products{
     flex: 1;
     /* border: 2px solid red; */
@@ -358,7 +246,15 @@ footer{
 
 .footer_products ul li a{
     color: black;
+    text-decoration: none;
 }
+
+.sitemap ul li a{
+
+    text-decoration: none;
+    color: black !important;
+  }
+
 
 .footer__about{
     flex: 1;
@@ -389,6 +285,7 @@ footer{
 .copyright{
     font-weight: bold;
 }
+
 @media screen and (max-width:930px) {
     body{
     background-image: radial-gradient( circle farthest-corner at 10% 50%,rgba(255,247,228,1) 10% , rgba(226,240,254,1) 90% );
@@ -452,34 +349,29 @@ footer{
         opacity: 1;
     }
 
-    .hero-1 h2 span{
-        font-size: 2rem;
+
+    .about__container{
+        padding: 10px 10px;
     }
 
-    .about-us{
-        /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(226,240,254,1) 0%, rgba(255,247,228,1) 90% ); */
-        width: 100%;
-        text-align: center;
-        padding: 3rem 3rem;
+    .about__container__mission__container{
+        flex-direction: column;
     }
 
-    .about-us h1{
-        font-size: 1.5rem;
-    }
-
-    .products h1{
-        font-size: 1.5rem;
-    }
-
-    .products_container_item{
-        width: 80vw;
-        height: 60vw;
-        /* border: 2px solid green; */
-        margin: 2rem 0rem;
+    .reverse{
+        flex-direction: column-reverse;
     }
 
 
+    .text_title{
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        color: white;
+    }
+    
 
+    
     footer{
         padding: 0rem 0rem;
         text-align: center;
@@ -493,9 +385,6 @@ footer{
         /* border: 2px solid palegoldenrod; */
         margin: 20px 0px;
     }
-
-
-   
 
     .footer_products{
         margin: 20px 0px;
@@ -512,6 +401,12 @@ footer{
         margin: 0px;
         padding:0px;
     }
+
+    .sitemap ul li a{
+
+        text-decoration: none;
+        color: black;
+      }
 
     .footer_products ul{
         margin: 0px;
@@ -539,4 +434,7 @@ footer{
         font-weight: bold;
         text-align: center;
     }
+
+
+   
 }
